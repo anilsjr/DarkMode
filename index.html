@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Light/Dark Mode</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body class="d-flex flex-column justify-content-center align-items-center vh-100 bg-light text-dark" id="theme">
+    
+    <h1 class="fw-bold">Light/Dark Mode</h1>
+    <p class="fs-5 text-center">Dark Mode Websites using HTML, CSS & JavaScript.</p>
+    <h3 id="darkModeText" class="fw-semibold">Dark Mode is OFF</h3>
+
+    <div class="mt-3">
+        <button class="btn btn-dark me-2 border border-light" onclick="darkMode()">Dark Mode</button>
+        <button class="btn btn-light border" onclick="lightMode()">Light Mode</button>
+    </div>
+
+    <script>
+        function darkMode() {
+            document.body.classList.replace("bg-light", "bg-dark");
+            document.body.classList.replace("text-dark", "text-white");
+            document.getElementById("darkModeText").innerText = "Dark Mode is ON";
+        }
+
+        function lightMode() {
+            document.body.classList.replace("bg-dark", "bg-light");
+            document.body.classList.replace("text-white", "text-dark");
+            document.getElementById("darkModeText").innerText = "Dark Mode is OFF";
+        }
+    </script>
+
+</body>
+</html>
